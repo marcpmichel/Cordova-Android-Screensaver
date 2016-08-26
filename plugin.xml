@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.hughisaacs2.cordova.plugins.androidwidgetplugin"
+    version="0.0.1">
+	
+	<name>AndroidScreensaverPlugin</name>
+    <description>Cordova Android Screensaver Plugin</description>
+	<author email="hughisaacs@acrylicstyle.com" href="http://hughisaacs2.acrylicstyle.com">Hugh Isaacs II</author>
+    <license>MIT</license>
+	<keywords>ecosystem:cordova,cordova-android</keywords>
+	
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+
+  <platform name="android">
+	
+	<config-file target="AndroidManifest.xml" parent="/manifest/application">
+	
+		<service
+			android:name="com.acrylicstyle.asmg.ScreensaverProvider"
+			android:exported="true"
+			android:label="@string/short_app_name" >
+			<intent-filter>
+				<action android:name="android.service.dreams.DreamService" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</service>
+	
+    </config-file>
+
+  </platform>
+
+</plugin>
