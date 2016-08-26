@@ -29,6 +29,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 		</service>
 	
     </config-file>
+    
+    <source-file src="ScreensaverProvider.java" target-dir="com/acrylicstyle/asmg" />
 
   </platform>
 
