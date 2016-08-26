@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.hughisaacs2.cordova.plugins.androidwidgetplugin"
+    id="com.hughisaacs2.cordova.plugins.androidscreensaverplugin"
     version="0.0.1">
 	
 	<name>AndroidScreensaverPlugin</name>
