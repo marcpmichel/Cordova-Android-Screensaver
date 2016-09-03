@@ -3,8 +3,9 @@ package com.acrylicstyle.asmg;
 import android.annotation.TargetApi;
 import android.service.dreams.DreamService;
 import android.webkit.WebView;
+
 @TargetApi(17)
-public class MyDreamService extends DreamService {
+public class ScreensaverProvider extends DreamService {
      @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();

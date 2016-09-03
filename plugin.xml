@@ -19,9 +19,9 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 	<config-file target="AndroidManifest.xml" parent="/manifest/application">
 	
 		<service
-			android:name="com.acrylicstyle.asmg.ScreensaverProvider"
+			android:name=".ScreensaverProvider"
 			android:exported="true"
-			android:label="@string/short_app_name" >
+			android:label="@string/short_app_name">
 			<intent-filter>
 				<action android:name="android.service.dreams.DreamService" />
 				<category android:name="android.intent.category.DEFAULT" />
@@ -30,8 +30,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 	
     </config-file>
     
-    <source-file src="ScreensaverProvider.java" target-dir="com/acrylicstyle/asmg" />
+    <source-file src="ScreensaverProvider.java" target-dir="src/com/acrylicstyle/asmg" />
 
   </platform>
-
 </plugin>
