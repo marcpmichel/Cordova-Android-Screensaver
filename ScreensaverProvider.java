@@ -1,4 +1,4 @@
-package com.acrylicstyle.asmg;
+package com.hughisaacs2.cordova.plugins.androidscreensaverplugin;
 
 import android.annotation.TargetApi;
 import android.service.dreams.DreamService;
