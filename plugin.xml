@@ -20,8 +20,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 	
 		<service
 			android:name=".ScreensaverProvider"
-			android:exported="true"
-			android:label="@string/short_app_name">
+			android:exported="true">
 			<intent-filter>
 				<action android:name="android.service.dreams.DreamService" />
 				<category android:name="android.intent.category.DEFAULT" />
