@@ -10,22 +10,15 @@ public class ScreensaverProvider extends DreamService {
      @Override
      CordovaWebView cwv;
     public void onAttachedToWindow() {
-        //super.onAttachedToWindow();
-        // Allow user touch
-        //setInteractive(true);
-        // Hide system UI
-        //setFullscreen(true);
-        // Set the dream layout
-        //WebView webView = new WebView(this);
-        //setContentView(webView);
-        //webView.loadUrl("file:///android_asset/www/screensaver.html");
-         
         super.onAttachedToWindow();
         // Allow user touch
         setInteractive(true);
         // Hide system UI
         setFullscreen(true);
         // Set the dream layout
+	//WebView webView = new WebView(this);
+        //setContentView(webView);
+        //webView.loadUrl("file:///android_asset/www/screensaver.html");
 		cwv webview = new CordovaWebView(this);
 		org.apache.cordova.Config.init(this);
         setContentView(cwv);
