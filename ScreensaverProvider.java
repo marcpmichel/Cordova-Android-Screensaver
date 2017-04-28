@@ -17,7 +17,6 @@ import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.*;
 
 @TargetApi(17)
 public class ScreensaverProvider extends DreamService {
@@ -31,8 +30,6 @@ public class ScreensaverProvider extends DreamService {
         setFullscreen(true);
         // Set the dream layout
 
-        cwv webview = new CordovaWebView(this);
-        /*
         WebView webView = new WebView(this);
         setContentView(webView);
         webView.getSettings().setJavaScriptEnabled(true);
@@ -40,11 +37,6 @@ public class ScreensaverProvider extends DreamService {
         webView.getSettings().setDomStorageEnabled(true);
         webView.getSettings().setAllowFileAccess(true);
 
-        webView.loadUrl(screenSaverIndex);
-*/
-        //setContentView(R.layout.cordova_screen_saver);
-        //cwv = (CordovaWebView) findViewById(R.id.CordovaScreenSaverWebView);
-        String screenSaverIndex = preferences.getString("ScreenSaverIndex", "index.html");
-        cwv.loadUrl("file:///android_asset/www/screensaver.html");
+        webView.loadUrl("file:///android_asset/www/screensaver.html");
     }
 }
