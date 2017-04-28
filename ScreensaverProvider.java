@@ -1,8 +1,17 @@
 package com.hughisaacs2.cordova.plugins.androidscreensaverplugin;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.service.dreams.DreamService;
+import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+
+import android.app.ActivityManager;
+import android.os.Build;
+import android.graphics.Color;
+import android.content.Context;
+
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CordovaInterface;
@@ -11,7 +20,7 @@ import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.*;
 
 @TargetApi(17)
-public class ScreensaverProvider extends DreamService implements CordovaInterface {
+public class ScreensaverProvider extends DreamService {
      @Override
      CordovaWebView cwv;
     public void onAttachedToWindow() {
@@ -21,11 +30,21 @@ public class ScreensaverProvider extends DreamService implements CordovaInterfac
         // Hide system UI
         setFullscreen(true);
         // Set the dream layout
-	
-        setContentView(R.layout.cordova_screen_saver);
-        cwv = (CordovaWebView) findViewById(R.id.CordovaScreenSaverWebView);
 
+        cwv webview = new CordovaWebView(this);
+        /*
+        WebView webView = new WebView(this);
+        setContentView(webView);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setGeolocationEnabled(true);
+        webView.getSettings().setDomStorageEnabled(true);
+        webView.getSettings().setAllowFileAccess(true);
+
+        webView.loadUrl(screenSaverIndex);
+*/
+        //setContentView(R.layout.cordova_screen_saver);
+        //cwv = (CordovaWebView) findViewById(R.id.CordovaScreenSaverWebView);
         String screenSaverIndex = preferences.getString("ScreenSaverIndex", "index.html");
-        cwv.loadUrl(screenSaverIndex);
+        cwv.loadUrl("file:///android_asset/www/screensaver.html");
     }
 }
