@@ -13,7 +13,6 @@ import android.webkit.WebView;
 @TargetApi(17)
 public class ScreensaverProvider extends DreamService {
      @Override
-     CordovaWebView cwv;
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         // Allow user touch
