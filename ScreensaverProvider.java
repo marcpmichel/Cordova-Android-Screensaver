@@ -1,10 +1,10 @@
 package com.hughisaacs2.cordova.plugins.androidscreensaverplugin;
 
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaArgs;
-import org.apache.cordova.CordovaInterface;
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CordovaWebView;
+//import org.apache.cordova.CallbackContext;
+//import org.apache.cordova.CordovaArgs;
+//import org.apache.cordova.CordovaInterface;
+//import org.apache.cordova.CordovaPlugin;
+//import org.apache.cordova.CordovaWebView;
 
 import android.annotation.TargetApi;
 import android.service.dreams.DreamService;
@@ -23,7 +23,7 @@ public class ScreensaverProvider extends DreamService {
         WebView webView = new WebView(this);
         setContentView(webView);
 
-        webView.getSettings().setJavaScriptEnabled(true);
+        //webView.getSettings().setJavaScriptEnabled(true);
         //webView.getSettings().setGeolocationEnabled(true);
         //webView.getSettings().setDomStorageEnabled(true);
         //webView.getSettings().setAllowFileAccess(true);
