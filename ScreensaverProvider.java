@@ -24,9 +24,9 @@ public class ScreensaverProvider extends DreamService {
         setContentView(webView);
 
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setGeolocationEnabled(true);
-        webView.getSettings().setDomStorageEnabled(true);
-        webView.getSettings().setAllowFileAccess(true);
+        //webView.getSettings().setGeolocationEnabled(true);
+        //webView.getSettings().setDomStorageEnabled(true);
+        //webView.getSettings().setAllowFileAccess(true);
         webView.loadUrl("file:///android_asset/www/test.html");
     }
 }
