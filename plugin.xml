@@ -29,6 +29,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 	
     </config-file>
     
+    
+    <source-file src="cordova_screen_saver.xml" target-dir="res/layout-v17" />
     <source-file src="ScreensaverProvider.java" target-dir="src/com/hughisaacs2/cordova/plugins/androidscreensaverplugin" />
 
   </platform>
