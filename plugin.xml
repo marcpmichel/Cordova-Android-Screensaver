@@ -19,6 +19,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 	<config-file target="AndroidManifest.xml" parent="/manifest/application">
 	
 		<service
+			android:permission="android.permission.BIND_DREAM_SERVICE"
 			android:name="com.hughisaacs2.cordova.plugins.androidscreensaverplugin.ScreensaverProvider"
 			android:exported="true">
 			<intent-filter>
